@@ -7,13 +7,23 @@ class NavComponent extends React.Component {
         return (
             <div className='nav flex'>
                 <div className="rightnav flex">
-                    <a href="">React App</a>
+                    <button  onClick={()=>{
+                        window.location="/"
+                    }}  >React App</button>
                 </div>
                 <div className="leftnav flex">
-                    <a href="">Home</a>
-                    <a href="">Products</a>
-                    <a href="">Contact</a>
-                    <a href="">Social</a>
+                    <button onClick={()=>{
+                        window.location="/"
+                    }}>Home</button>
+                    <button  onClick={()=>{
+                        window.location="/courses"
+                    }}  >Products</button>
+                    <button  onClick={()=>{
+                        window.location="/admin/Signup"
+                    }}  >AdminSignup</button>
+                    <button  onClick={()=>{
+                        window.location="/admin/courses"
+                    }}  >AddCourse</button>
                 </div>
             </div>
         )

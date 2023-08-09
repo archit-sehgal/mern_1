@@ -35,14 +35,14 @@ body {
     justify-content: space-between;
     padding-inline:200px;
 }
-a,link{
+a,button{
     text-decoration: none;
     color: rgb(22, 22, 22);
 }
-.rightnav a{
+.rightnav button{
     font-size:1.5rem;
 }
-.leftnav a{
+.leftnav button{
     margin-left:20px;
     letter-spacing: .1rem;
     font-size: 1.1rem;
@@ -90,4 +90,24 @@ a,link{
     font-size: 1.5rem;
     font-weight: 800;
     color: rgb(255, 90, 90);
+}
+/* signup */
+.Signup_form{
+    margin-top: 150px;
+    flex-direction: column;
+    background-color: yellow;
+    width: 400px;
+    height: 300px;
+    align-items: center;
+    padding: 30px;
+}
+.Signup_form input{
+    margin: 5px 0;
+    font-size: 1.3vw;
+}
+.Signup_form button{
+    background-color: #111;
+    color: yellow;
+    padding:5px;
+    margin-top:20px;
 }
