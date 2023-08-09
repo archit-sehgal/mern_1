@@ -10,7 +10,7 @@ class NavComponent extends React.Component {
                 </div>
                 <div className="leftnav flex">
                     <button><Link to="/">Home</Link></button>
-                    <button><Link to="/courses">Products</Link></button>
+                    <button><Link to="/courses">Courses</Link></button>
                     <button><Link to="/admin/Signup">AdminSignup</Link></button>
                     <button><Link to="/admin/courses">AddCourse</Link></button>
                 </div>
