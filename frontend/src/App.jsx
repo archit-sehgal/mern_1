@@ -8,16 +8,16 @@ import AddCourses from './components/AddCourses';
 
 function App() {
   return (
-    <div id='main' className='flex'>
-      <NavComponent />
-      <Router>
+    <Router>
+      <div id='main' className='flex'>
+        <NavComponent />
         <Routes>
-          <Route path='/courses' element={<GetCourses/>}></Route>
-          <Route path='/admin/signup' element={<AdminSignup/>}></Route>
-          <Route path='/admin/courses' element={<AddCourses/>}></Route>
+          <Route path='/courses' element={<GetCourses />}></Route>
+          <Route path='/admin/signup' element={<AdminSignup />}></Route>
+          <Route path='/admin/courses' element={<AddCourses />}></Route>
         </Routes>
-      </Router>
-    </div>
+      </div>
+    </Router>
   )
 }
 
