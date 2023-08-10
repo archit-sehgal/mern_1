@@ -33,6 +33,7 @@ function AddCourses() {
                     .then((res)=>{
                         res.json().then((data)=>{
                             console.log(data)
+                            window.location="/courses"
                         })
                     })
                 }}>Add Course</button>

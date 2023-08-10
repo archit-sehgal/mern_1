@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 function AdminSignup() {
     const [admin, setAdmin] = useState("")
@@ -28,6 +29,7 @@ function AdminSignup() {
                                 response.json().then((data)=>{
                                     console.log(data)
                                     localStorage.setItem("token",data.token)
+                                    window.location="/"
                                 })
                             })
 

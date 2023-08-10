@@ -62,6 +62,14 @@ mongoose.connect("mongodb+srv://architsehgal:Architgr8@mernapp.sxuwmfu.mongodb.n
     });
 // -----------------------------
 // get all [global]
+
+app.get("/admin/me",authenticateJwt,(req,res)=>[
+    res.json({
+        adminname:req.user.adminname
+    })
+])
+
+
 app.get("/", async (req, res) => {
     try {
         const courses = await Course.find({});
