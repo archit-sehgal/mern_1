@@ -4,7 +4,10 @@ function AddCourses() {
     const [desc, setDesc] = useState("")
     const [price, setPrice] = useState("")
     return (
-        <div>
+        <div className="AddcourseMain flex">
+            <div className="addcoursehead flex">
+                <h1>Add Course</h1>
+            </div>
             <div className="Signup_form flex">
                 Title-<input onChange={(e) => {
                     setTitle(e.target.value)

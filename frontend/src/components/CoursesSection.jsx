@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
+import UpdateCourse from './UpdateCourse';
 function GetCourses() {
     const [courses, setCourses] = useState([]);
     useEffect(() => {

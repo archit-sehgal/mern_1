@@ -13,7 +13,6 @@ function NavComponent() {
       .then((res) => res.json())
       .then((data) => {
         if (data.adminname) {
-          console.log(data.adminname);
           setAdminName(data.adminname);
         }
       });
