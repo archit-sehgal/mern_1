@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-
-function AdminSignup() {
+import { Navigate } from "react-router-dom";
+function AdminSignup({setAdminName}) {
   const [admin, setAdmin] = useState("");
   const [pass, setPass] = useState("");
+  const navigate=useNavigate();
   return (
     <div  className="AddcourseMain flex">
       <div className="addcoursehead flex">
@@ -36,7 +37,8 @@ function AdminSignup() {
             );
             let data = response.data;
             localStorage.setItem("token", data.token);
-            window.location = "/";
+            setAdminName(admin)
+            navigate("/")
           }}
         >
           Signup

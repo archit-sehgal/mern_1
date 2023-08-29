@@ -1,5 +1,7 @@
 import { useState } from "react"
+import { Navigate, useNavigate } from "react-router-dom"
 function AddCourses() {
+    const  navigate=useNavigate();
     const [title, setTitle] = useState("")
     const [desc, setDesc] = useState("")
     const [price, setPrice] = useState("")
@@ -36,7 +38,7 @@ function AddCourses() {
                     .then((res)=>{
                         res.json().then((data)=>{
                             console.log(data)
-                            window.location="/courses"
+                            navigate("/courses")
                         })
                     })
                 }}>Add Course</button>

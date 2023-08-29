@@ -1,23 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
-function NavComponent() {
-  const [adminname, setAdminName] = useState(null);
-  useEffect(() => {
-    fetch("http://localhost:3000/admin/me", {
-      method: "GET",
-      headers: {
-        Authorization: "Bearer " + localStorage.getItem("token"),
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.adminname) {
-          setAdminName(data.adminname);
-        }
-      });
-  }, []);
-
+import { Link, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+function NavComponent({adminname,setAdminName}) {
+  const navigate=useNavigate();
   if (adminname) {
     return (
       <div className="nav flex">
@@ -31,7 +16,8 @@ function NavComponent() {
           <button
             onClick={() => {
               localStorage.setItem("token", null);
-              window.location = "/";
+              setAdminName(null)
+              navigate("/")
             }}
           >
             logout

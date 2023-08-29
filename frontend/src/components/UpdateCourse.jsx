@@ -121,7 +121,7 @@ function AddInput(props) {
           });
         }}
       >
-        Update Course
+        Update the Course
       </button>
     </div>
   );

@@ -15,18 +15,37 @@ import AddCourses from "./components/AddCourses";
 import UpdateCourse from "./components/UpdateCourse";
 
 function App() {
+  const [adminname, setAdminName] = useState(null);
+  const init = async () => {
+    await fetch("http://localhost:3000/admin/me", {
+      method: "GET",
+      headers: {
+        Authorization: "Bearer " + localStorage.getItem("token"),
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.adminname) {
+          setAdminName(data.adminname);
+        }
+      });
+      useEffect(()=>{
+        init();
+      })
+  };
+
   return (
     <RecoilRoot>
       <Router>
         <div id="main" className="flex">
-          <NavComponent />
+          <NavComponent adminname={adminname} setAdminName={setAdminName}/>
           <Routes>
             <Route path="/courses" element={<GetCourses />}></Route>
-            <Route path="/admin/signup" element={<AdminSignup />}></Route>
+            <Route path="/admin/signup" element={<AdminSignup setAdminName={setAdminName} />}></Route>
             <Route path="/admin/courses" element={<AddCourses />}></Route>
             <Route
               path="/courses/:coursetitle"
-              element={<UpdateCourse />}
+              element={<UpdateCourse setAdminName={setAdminName}/>}
             ></Route>
           </Routes>
         </div>
