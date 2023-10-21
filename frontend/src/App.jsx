@@ -13,6 +13,7 @@ import GetCourses from "./components/CoursesSection";
 import AdminSignup from "./components/AdminSignup";
 import AddCourses from "./components/AddCourses";
 import UpdateCourse from "./components/UpdateCourse";
+import Home from "./components/Home";
 
 function App() {
   const [adminname, setAdminName] = useState(null);
@@ -40,6 +41,7 @@ function App() {
         <div id="main" className="flex">
           <NavComponent adminname={adminname} setAdminName={setAdminName}/>
           <Routes>
+          <Route path="/" element={<Home />}></Route>
             <Route path="/courses" element={<GetCourses />}></Route>
             <Route path="/admin/signup" element={<AdminSignup setAdminName={setAdminName} />}></Route>
             <Route path="/admin/courses" element={<AddCourses />}></Route>
