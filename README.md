@@ -1,4 +1,4 @@
-# <h1> mern_1</h1>
+# <h1> manage courses-Admin Panel</h1>
 Admin panel for courses web app
 <p>add courses, login/signup,edit courses</p>
 <p>(mongodb Atlas for database)</p>
