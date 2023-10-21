@@ -4,7 +4,7 @@ import UpdateCourse from './UpdateCourse';
 function GetCourses() {
     const [courses, setCourses] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3000/')
+        axios.get('https://courseselling-emwv.onrender.com/')
             .then(response => {
                 setCourses(response.data);
             })
@@ -13,7 +13,7 @@ function GetCourses() {
             });
             
         setInterval(() => {
-            axios.get('http://localhost:3000/')
+            axios.get('https://courseselling-emwv.onrender.com/')
             .then(response => {
                 setCourses(response.data);
             })

@@ -11,7 +11,7 @@ function UpdateCourse() {
   // const [courses, setCourses] = useState([]);
   const setCourses = useSetRecoilState(coursesState);
   useEffect(() => {
-    fetch("http://localhost:3000/courses", {
+    fetch("https://courseselling-emwv.onrender.com/courses", {
       method: "GET",
       headers: {
         Authorization: "bearer " + localStorage.getItem("token"),
@@ -89,7 +89,7 @@ function AddInput(props) {
       />
       <button
         onClick={() => {
-          fetch("http://localhost:3000/admin/courses/" + props.coursetitle, {
+          fetch("https://courseselling-emwv.onrender.com/admin/courses/" + props.coursetitle, {
             method: "POST",
             body: JSON.stringify({
               title: title,

@@ -29,7 +29,7 @@ function AdminSignup({setAdminName}) {
         <button
           onClick={async () => {
             const response = await axios.post(
-              "http://localhost:3000/admin/signup",
+              "https://courseselling-emwv.onrender.com/admin/signup",
               {
                 adminname: admin,
                 password: pass,

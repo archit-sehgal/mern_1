@@ -23,7 +23,7 @@ function AddCourses() {
                     setPrice(e.target.value)
                 }} type="text" />
                 <button onClick={()=>{
-                    fetch("http://localhost:3000/admin/courses",{
+                    fetch("https://courseselling-emwv.onrender.com/admin/courses",{
                         method:"POST",
                         body:JSON.stringify({
                             title:title,

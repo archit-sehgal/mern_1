@@ -17,7 +17,7 @@ import UpdateCourse from "./components/UpdateCourse";
 function App() {
   const [adminname, setAdminName] = useState(null);
   const init = async () => {
-    await fetch("http://localhost:3000/admin/me", {
+    await fetch("https://courseselling-emwv.onrender.com/admin/me", {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
